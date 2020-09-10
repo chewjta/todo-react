@@ -1,9 +1,14 @@
 import React from 'react';
+import {FormControl,InputGroup} from 'react-bootstrap'
+
 
 const Input = (props) => {
     return (
         <div>
-            <input
+
+            <FormControl
+            style={{width:'800px',margin:'20px auto'}}
+            placeholder="What's Next"
             type="text"
             className = "input-field"
             value={props.newItem}

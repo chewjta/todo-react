@@ -1,21 +1,16 @@
 import React from 'react';
+import {Card,Button} from 'react-bootstrap';
 
 const Addedlist = (props) => {
 const listItems = props.list.map(item=>{
         return(
-            <li key={item.id}>
-                <div className="list-item">
-                    <div className="del-button">
-                        <button onClick={()=>{props.deleteItem(item.id)}}>Delete</button>
-                    </div>
-                    <div className="description">
-                        {item.value}
-                    </div>
-                    <div className="created">
-                        {item.date}
-                    </div>
-                </div>
-            </li>
+            <Card style={{ width: '30rem', margin:'10px auto' }}>
+          <Card.Body>
+            <Card.Title>{item.value}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">{item.date}</Card.Subtitle>
+            <Button variant='danger' onClick={()=>{props.deleteItem(item.id)}}>Delete</Button>
+          </Card.Body>
+        </Card>
             )
 })
     return (
@@ -27,3 +22,5 @@ const listItems = props.list.map(item=>{
 }
 
 export default Addedlist
+
+

@@ -1,13 +1,15 @@
 import React from 'react';
+import {Button} from 'react-bootstrap';
+
 
 const Form = (props) => {
     return(
             <div>
-            <button
+            <Button variant="success"
             className="submit-btn"
             onClick={()=>{props.onClick()}}>
             Add Item
-            </button>
+            </Button>
             </div>
         )
 
